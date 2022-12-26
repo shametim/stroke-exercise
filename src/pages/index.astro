@@ -1,5 +1,9 @@
 ---
+import "../base.css";
+
+const timer = [1, 2, 3, 5, 6, 7, 8, 9, 10].reverse();
 ---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,7 +12,22 @@
     <meta name="generator" content={Astro.generator} />
     <title>Stroke Exercise</title>
   </head>
-  <body class="bg-black">
 
+  <body>
+    <word-count>
+      <p id="isolated">Isolated</p>
+    </word-count>
+
+    <script>
+      export class WordCount extends HTMLElement {
+        constructor() {
+          super();
+          const wordcount = this.querySelector("#isolated");
+        }
+      }
+
+      window.customElements.define("word-count", WordCount);
+    </script>
+    <style></style>
   </body>
 </html>

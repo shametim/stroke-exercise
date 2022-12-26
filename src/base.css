@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @keyframes flow {
+    from {
+      height: 100%;
+    }
+    to {
+      height: 0%;
+    }
+  }
+
+  #flow {
+    border: 1px solid rgb(198, 38, 38);
+    animation: flow 10s infinite;
+    height: 100%;
+  }
+
+  #selectButton:checked {
+    background: rgb(198, 38, 38);
+  }
+}
+
+@layer base {
+  body {
+    @apply text-white bg-slate-900;
+  }
+}
