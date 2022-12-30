@@ -1,33 +1,20 @@
 ---
 import "../base.css";
-
-const timer = [1, 2, 3, 5, 6, 7, 8, 9, 10].reverse();
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- <link rel="stylesheet" href="https://rsms.me/inter/inter.css" /> -->
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Stroke Exercise</title>
+    <title>Your next match</title>
   </head>
 
-  <body>
-    <word-count>
-      <p id="isolated">Isolated</p>
-    </word-count>
-
-    <script>
-      export class WordCount extends HTMLElement {
-        constructor() {
-          super();
-          const wordcount = this.querySelector("#isolated");
-        }
-      }
-
-      window.customElements.define("word-count", WordCount);
-    </script>
-    <style></style>
+  <body class="overflow-hidden">
+    <h1 class="text-4xl font-extrabold text-center">
+      Find me src/paasdges/index.astro
+    </h1>
   </body>
 </html>

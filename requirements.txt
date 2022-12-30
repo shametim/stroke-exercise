@@ -1,0 +1,1 @@
+Trafilatura==1.4.0
