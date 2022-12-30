@@ -1,13 +1,14 @@
-import http.server
+from http.server import BaseHTTPRequestHandler
 
 import trafilatura
 
-class RequestHandler(http.server.BaseHTTPRequestHandler):
+
+class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         # Get the URL from the query string
         url = self.path[1:]
-        
-        text = trafilatura.extract(url)
+
+        text = trafilatura.extract(url, output_format="json")
 
         self.send_response(200)
 
